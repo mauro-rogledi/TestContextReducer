@@ -11,14 +11,14 @@ export function ChangeColor() {
         title="Dark Theme"
         onPress={() => {
           console.log('dark');
-          dispatch({type: 'Change', payload: darkTheme});
+          dispatch({type: 'Theme', payload: darkTheme});
         }}
       />
       <Button
         title="Light Theme"
         onPress={() => {
           console.log('white');
-          dispatch({type: 'Change', payload: lightTheme});
+          dispatch({type: 'Theme', payload: lightTheme});
         }}
       />
       <Button

@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useReducer} from 'react';
-import {IContextTheme, ITheme, ThemeAction, ThemeActionKind} from './reducer';
+import {IContextTheme, ITheme, ThemeAction} from './reducer';
 
 export const lightTheme: ITheme = {
   color: 'black',
@@ -20,7 +20,7 @@ export function useTheme(): IContextTheme {
 export function themeReducer(theme: ITheme, actionTheme: ThemeAction): ITheme {
   const {type, payload} = actionTheme;
   switch (type) {
-    case 'Change':
+    case 'Theme':
       return payload;
     case 'Background':
       return {...theme, background: payload};

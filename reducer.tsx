@@ -7,10 +7,7 @@ export interface ITheme {
 }
 
 export type ThemeAction =
-  | {
-      type: 'Change';
-      payload: ITheme;
-    }
+  | {type: 'Theme'; payload: ITheme}
   | {type: 'Color'; payload: ColorValue}
   | {type: 'Background'; payload: ColorValue};
 
